@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ikemura.android_multi_tab_sample.R;
-import com.ikemura.android_multi_tab_sample.multitab.middle.MiddleTabFragment;
 import com.ikemura.android_multi_tab_sample.multitab.child.PlusOneFragment;
+import com.ikemura.android_multi_tab_sample.multitab.middle.MiddleTabFragment;
 import com.ikemura.android_multi_tab_sample.multitab.viewpagers.BasicPagerAdapter;
 import com.ikemura.android_multi_tab_sample.multitab.viewpagers.PageEntry;
 
@@ -61,7 +61,7 @@ public class NewsTabFragment extends Fragment {
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return MiddleTabFragment.newopInstance("ウィークリーニュース");
+                return MiddleTabFragment.newInstance("ウィークリーニュース");
             }
 
             @Override
