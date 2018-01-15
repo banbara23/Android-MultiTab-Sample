@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.ikemura.android_multi_tab_sample.multitab.top.TopTabFragment"
+    >
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_middle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabBackground="@color/grey"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabMode="scrollable"
+        />
+    <!--app:tabMode="fixed" -->
+
+    <com.ikemura.android_multi_tab_sample.multitab.NoSwipeViewPager
+        android:id="@+id/view_pager_middle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>
