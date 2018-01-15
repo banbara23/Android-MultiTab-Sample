@@ -61,7 +61,7 @@ public class NewsTabFragment extends Fragment {
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return MiddleTabFragment.newInstance("ウィークリーニュース");
+                return MiddleTabFragment.newopInstance("ウィークリーニュース");
             }
 
             @Override
