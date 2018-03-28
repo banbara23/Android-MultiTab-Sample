@@ -119,6 +119,12 @@ public class MiddleTabFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG, getName());
+        Log.d(TAG, "onResume " + getName());
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView " + getName());
     }
 }

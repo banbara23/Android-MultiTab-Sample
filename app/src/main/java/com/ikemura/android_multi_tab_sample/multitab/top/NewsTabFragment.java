@@ -43,6 +43,7 @@ public class NewsTabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView " + getName());
         View view = inflater.inflate(R.layout.fragment_top_tab, container, false);
         mTabLayout = view.findViewById(R.id.tab);
         mViewPager = view.findViewById(R.id.view_pager);
@@ -61,23 +62,56 @@ public class NewsTabFragment extends Fragment {
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return MiddleTabFragment.newInstance("ウィークリーニュース");
+                return MiddleTabFragment.newInstance("ニュース");
             }
 
             @Override
             public CharSequence getPageTitle() {
-                return "ウィークリーニュース";
+                return "ニュース";
             }
         });
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return PlusOneFragment.newInstance("専門ショップニュース");
+                return PlusOneFragment.newInstance("カレンダー");
             }
 
             @Override
             public CharSequence getPageTitle() {
-                return "専門ショップニュース";
+                return "カレンダー";
+            }
+        });
+        mPageEntries.add(new PageEntry() {
+            @Override
+            public Fragment create(int position) {
+                return MiddleTabFragment.newInstance("ブログ");
+            }
+
+            @Override
+            public CharSequence getPageTitle() {
+                return "ブログ";
+            }
+        });
+        mPageEntries.add(new PageEntry() {
+            @Override
+            public Fragment create(int position) {
+                return PlusOneFragment.newInstance("Instagram");
+            }
+
+            @Override
+            public CharSequence getPageTitle() {
+                return "Instagram";
+            }
+        });
+        mPageEntries.add(new PageEntry() {
+            @Override
+            public Fragment create(int position) {
+                return PlusOneFragment.newInstance("Facebook");
+            }
+
+            @Override
+            public CharSequence getPageTitle() {
+                return "Facebook";
             }
         });
     }
@@ -89,6 +123,12 @@ public class NewsTabFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        Log.d(TAG, getName());
+        Log.d(TAG, "onResume " + getName());
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Log.d(TAG, "onDestroyView " + getName());
     }
 }

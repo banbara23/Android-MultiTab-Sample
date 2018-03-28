@@ -10,8 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.ikemura.android_multi_tab_sample.R;
-import com.ikemura.android_multi_tab_sample.multitab.middle.MiddleTabFragment;
-import com.ikemura.android_multi_tab_sample.multitab.child.PlusOneFragment;
 import com.ikemura.android_multi_tab_sample.multitab.viewpagers.BasicPagerAdapter;
 import com.ikemura.android_multi_tab_sample.multitab.viewpagers.PageEntry;
 
@@ -75,56 +73,23 @@ public class TopTabFragment extends Fragment {
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return NewsTabFragment.newInstance("ニュース");
+                return NewsTabFragment.newInstance("ウィークリーニュース");
             }
 
             @Override
             public CharSequence getPageTitle() {
-                return "ニュース";
+                return "ウィークリーニュース";
             }
         });
         mPageEntries.add(new PageEntry() {
             @Override
             public Fragment create(int position) {
-                return PlusOneFragment.newInstance("カレンダー");
+                return NewsTabFragment.newInstance("専門ショップニュース");
             }
 
             @Override
             public CharSequence getPageTitle() {
-                return "カレンダー";
-            }
-        });
-        mPageEntries.add(new PageEntry() {
-            @Override
-            public Fragment create(int position) {
-                return MiddleTabFragment.newInstance("ブログ");
-            }
-
-            @Override
-            public CharSequence getPageTitle() {
-                return "ブログ";
-            }
-        });
-        mPageEntries.add(new PageEntry() {
-            @Override
-            public Fragment create(int position) {
-                return PlusOneFragment.newInstance("Instagram");
-            }
-
-            @Override
-            public CharSequence getPageTitle() {
-                return "Instagram";
-            }
-        });
-        mPageEntries.add(new PageEntry() {
-            @Override
-            public Fragment create(int position) {
-                return PlusOneFragment.newInstance("Facebook");
-            }
-
-            @Override
-            public CharSequence getPageTitle() {
-                return "Facebook";
+                return "専門ショップニュース";
             }
         });
     }
