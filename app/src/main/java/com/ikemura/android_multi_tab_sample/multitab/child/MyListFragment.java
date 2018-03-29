@@ -96,6 +96,12 @@ public class MyListFragment extends Fragment {
         mListener = null;
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.d(TAG, "setUserVisibleHint " + getName() + " " + isVisibleToUser);
+    }
+
     public interface OnListFragmentInteractionListener {
         void onListFragmentInteraction(DummyItem item);
     }

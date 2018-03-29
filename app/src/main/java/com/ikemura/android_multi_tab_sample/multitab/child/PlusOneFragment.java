@@ -105,4 +105,10 @@ public class PlusOneFragment extends Fragment {
     private String getName() {
         return getArguments().getString(TAG, "");
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.d(TAG, "setUserVisibleHint " + getName() + " " + isVisibleToUser);
+    }
 }

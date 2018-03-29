@@ -127,4 +127,10 @@ public class MiddleTabFragment extends Fragment {
         super.onDestroyView();
         Log.d(TAG, "onDestroyView " + getName());
     }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.d(TAG, "setUserVisibleHint " + getName() + " " + isVisibleToUser);
+    }
 }

@@ -44,7 +44,7 @@ public class NewsTabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView " + getName());
-        View view = inflater.inflate(R.layout.fragment_top_tab, container, false);
+        View view = inflater.inflate(R.layout.fragment_news_tab, container, false);
         mTabLayout = view.findViewById(R.id.tab);
         mViewPager = view.findViewById(R.id.view_pager);
 
@@ -130,5 +130,11 @@ public class NewsTabFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         Log.d(TAG, "onDestroyView " + getName());
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        Log.d(TAG, "setUserVisibleHint " + getName() + " " + isVisibleToUser);
     }
 }

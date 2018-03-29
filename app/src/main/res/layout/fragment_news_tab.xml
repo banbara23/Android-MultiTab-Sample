@@ -11,10 +11,10 @@
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        app:tabBackground="@color/green"
+        app:tabBackground="@color/yellow"
         app:tabGravity="fill"
         app:tabIndicatorColor="@color/colorAccent"
-        app:tabMode="fixed"
+        app:tabMode="scrollable"
         />
     <!--app:tabMode="fixed" -->
 
